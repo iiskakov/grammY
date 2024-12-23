@@ -14,7 +14,11 @@ export default {
       caption: "Как проходить тренировку?\n Тренируйтесь 6 дней в неделю, а в воскресенье отдыхайте и устраивайте полный информационный детокс.\n Чтобы было хорошее настроение, память и продуктивность дайте мозгу восстановиться!"
     });
 
-    // Then, send the voice message
+    // Send first voice message
     await ctx.replyWithVoice(new InputFile("./assets/1.ogg"));
+    
+    // Send text message and second voice message
+    await ctx.reply("Прослушайте второе аудио после того как прошли тест.");
+    await ctx.replyWithVoice(new InputFile("./assets/2.ogg"));
   },
 };
